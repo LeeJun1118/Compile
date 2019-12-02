@@ -11,32 +11,31 @@ public enum BTNType
     Back,
     Quit
 }
-public class MainUI : MonoBehaviour
+public class MenuUI : MonoBehaviour
 {
-    private bool showMenu;
     public GameObject parts;
 
-    public void Start()
-    {
-        showMenu = false;
-    }
     public void Update()
     {
-        if (showMenu == false)
+
+        if (Input.GetKey(KeyCode.Escape))
         {
-            if (Input.GetKey(KeyCode.Escape))
+            if (!GameManager.isPause)
             {
+                GameManager.isPause = true;
                 parts.SetActive(true);
+                Time.timeScale = 0f;
             }
-        }
-        else
-        {
-            if (Input.GetKey(KeyCode.Escape))
+            else
             {
+                GameManager.isPause = false;
                 parts.SetActive(false);
+                Time.timeScale = 0f;
             }
         }
-        
+
+
+
     }
 
 

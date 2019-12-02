@@ -64,10 +64,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\BtnType.cs" />
+    <Compile Include="Assets\GameManager.cs" />
     <Compile Include="Assets\GameResult.cs" />
     <Compile Include="Assets\GoalArea.cs" />
     <Compile Include="Assets\Main.cs" />
-    <Compile Include="Assets\MainUI.cs" />
+    <Compile Include="Assets\MenuUI.cs" />
     <Compile Include="Assets\Out.cs" />
     <Compile Include="Assets\SceneLoad.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
