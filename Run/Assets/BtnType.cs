@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class BtnType : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
+public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public BTNType currentType;
     public Transform buttonScale;
@@ -31,16 +31,19 @@ public class BtnType : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
                 CanvasGroupOff(mainGroup);
                 break;
             case BTNType.Sound:
-                if(isSound)
                 {
+                    if (isSound)
+                    {
+                        Debug.Log("사운드OFF");
+                    }
+                    else
+                    {
+                        Debug.Log("사운드ON");
+                    }
                     isSound = !isSound;
-                    Debug.Log("사운드OFF");
+
                 }
-                else
-                {
-                    Debug.Log("사운드ON");
-                }
-                isSound = !isSound;
+
                 break;
             case BTNType.Back:
                 CanvasGroupOn(mainGroup);
@@ -73,6 +76,6 @@ public class BtnType : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        buttonScale.localScale = defaultScale; 
+        buttonScale.localScale = defaultScale;
     }
 }
