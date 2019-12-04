@@ -30,7 +30,7 @@ public class MenuUI : MonoBehaviour
             {
                 GameManager.isPause = false;
                 parts.SetActive(false);
-                Time.timeScale = 0f;
+                Time.timeScale = 1f;
             }
         }
 
