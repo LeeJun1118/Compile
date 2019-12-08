@@ -17,8 +17,7 @@ public class MenuUI : MonoBehaviour
 
     public void Update()
     {
-
-        if (Input.GetKey(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (!GameManager.isPause)
             {
@@ -33,9 +32,6 @@ public class MenuUI : MonoBehaviour
                 Time.timeScale = 1f;
             }
         }
-
-
-
     }
 
 

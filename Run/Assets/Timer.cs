@@ -19,6 +19,7 @@ public class Timer : MonoBehaviour
         {
             time += Time.deltaTime;
         }
+
         int t = Mathf.FloorToInt(time);
         Text uiText = GetComponent<Text>();
         uiText.text = "Time : " + t.ToString();
