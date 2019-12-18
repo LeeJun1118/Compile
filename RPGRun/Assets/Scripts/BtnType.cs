@@ -24,32 +24,17 @@ public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         //** 사운드가 들어가있는 오브젝트에서 해당 사운드의 컴퍼넌트를 들고옴. 
         m_AudioSource = GameObject.Find("Pillar").GetComponent<AudioSource>();
 
-        //** Tip
-        /*
-		 * > Sound  <=  (Game object) 생성
-		 *  - Road Hard - Solo  <=  (Game object) 생성후 사운드 제목으로 네이밍. 이곳에 오디오소스 포함.
-		 */
-
-
-
         //** 볼륨조절   (0.0f ~ 1.0f)
         m_AudioSource.volume = 1.0f;
 
-
-
         //** 반복 재생
         m_AudioSource.loop = true;
-
-
 
         //** 활성화시 해당씬 실행시 바로 사운드 재생이 시작됩니다.
         //** 비활성화시 Play()명령을 통해서만 재생됩니다.
         m_AudioSource.playOnAwake = true;
 
-
-
         //** 씬안에 모든 오디오 소스중 현재 오디오 소스의 우선순위를 정한다.
-
         //** 0 : 최우선
         //** 128 : 기본값
         //** 256 : 최하

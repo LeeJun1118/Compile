@@ -33,6 +33,4 @@ public class MenuUI : MonoBehaviour
             }
         }
     }
-
-
 }
